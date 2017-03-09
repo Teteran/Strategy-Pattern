@@ -1,5 +1,11 @@
+import Fabryka.FabrykaFigur;
+import Fabryka.IFigura;
 import Kompozyt.*;
 import Strategia.Pracownik;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Kacper on 2017-03-09.
@@ -8,8 +14,37 @@ public class Starter {
     public static void main(String[] args) {
 
         //Strategia();
-        kompozyt();
+        //kompozyt();
+        //fabryka();
 
+
+    }
+
+
+
+    private static  void fabryka(){
+        List<IFigura> figury = new ArrayList<>();
+
+        FabrykaFigur fabryka = new FabrykaFigur();
+
+        Scanner input = new Scanner(System.in);
+
+
+        while(true) {
+            String wybor = input.nextLine();
+            switch (wybor) {
+                case "pokaz": {
+                    for (IFigura figura : figury) {
+                        System.out.println(figura.getNazwa());
+                    }
+                    break;
+                }
+                default: {
+                    figury.add(fabryka.getFigura(wybor));
+                }
+
+            }
+        }
 
     }
 
