@@ -3,10 +3,26 @@
  */
 public class Pracownik {
 
-    String zawod;
+
     IPraca praca;
     ITransport transport;
+
     Pracownik(String zawod){
-        this.zawod = zawod;
-    }//
+
+        if(zawod.equalsIgnoreCase("lekarz")) {
+            praca = new Leczenie();
+            transport = new Samochod();
+        }
+        else if(zawod.equalsIgnoreCase("piekarz")){
+            praca = new Piecz();
+            transport = new Tramwaj();
+        }
+    }
+
+    public void pracuj(){
+        transport.jedz();
+        praca.pracuj();
+    }
+
+
 }
