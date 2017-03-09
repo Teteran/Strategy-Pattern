@@ -4,8 +4,8 @@
 public class Pracownik {
 
     String zawod;
-    Praca praca;
-    Transport transport;
+    IPraca praca;
+    ITransport transport;
     Pracownik(String zawod){
         this.zawod = zawod;
     }//

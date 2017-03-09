@@ -1,7 +1,7 @@
 /**
  * Created by Kacper on 2017-03-09.
  */
-public class Samochod implements  Transport {
+public class Samochod implements ITransport {
 
 
     @Override
