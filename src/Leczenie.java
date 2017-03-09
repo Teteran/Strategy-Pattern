@@ -1,7 +1,7 @@
 /**
  * Created by Kacper on 2017-03-08.
  */
-public class  Leczenie implements Praca {
+public class  Leczenie implements IPraca {
 
 
     @Override
