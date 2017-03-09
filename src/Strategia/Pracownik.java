@@ -1,3 +1,5 @@
+package Strategia;
+
 /**
  * Created by Kacper on 2017-03-08.
  */
@@ -7,7 +9,7 @@ public class Pracownik {
     IPraca praca;
     ITransport transport;
 
-    Pracownik(String zawod){
+    public Pracownik(String zawod){
 
         if(zawod.equalsIgnoreCase("lekarz")) {
             praca = new Leczenie();
