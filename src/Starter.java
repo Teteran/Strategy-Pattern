@@ -1,6 +1,7 @@
 import Fabryka.FabrykaFigur;
 import Fabryka.IFigura;
 import Kompozyt.*;
+import Dekorator.*;
 import Strategia.Pracownik;
 
 import java.util.Scanner;
@@ -16,10 +17,15 @@ public class Starter {
         //Strategia();
         //kompozyt();
         //fabryka();
+        dekorator();
 
 
     }
 
+    private static  void dekorator(){
+
+        DekoratorStarter dekoratorStarter = new DekoratorStarter();
+    }
 
 
     private static  void fabryka(){
@@ -73,7 +79,7 @@ public class Starter {
     }
 
 
-    private static void Strategia() {
+    private static void strategia() {
         Pracownik p1 = new Pracownik("lekarz");
         Pracownik p2 = new Pracownik("lekarz");
 
